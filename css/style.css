@@ -1,0 +1,109 @@
+/* Matthew Darke
+   VFW Project 4
+   1306 style.css
+*/
+
+
+h1 {
+	margin: 1px;
+	padding: 5px;
+	font-size: 24;
+	text-align: center;
+	color:rgba(34,10,150,1);
+	background-image:-webkit-linear-gradient(#a2bed6 0%, #94adcf 100%) ;
+	text-shadow: 2px 4px 6px #2557c1;
+
+}
+a:link {
+	display: inline;
+	font-size:22px ;
+	font-weight:bold ;
+	text-align:center ;
+	text-decoration: underline ;
+	color: #84e3ff;
+	background-color: none ;
+	padding: none ;
+	width:33px ;
+}
+
+
+
+
+legend {
+	font-size: 40;
+	color: #0b0585;
+	font-weight: bold;
+    border: bold;
+}
+body {
+	background-image: url(../../Desktop/Screen%20Shot%202013-06-21%20at%202.16.30%20PM.png)
+}
+h2,h3 {
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: normal;
+	text-indent: 1px;
+	color: #fafafa
+}
+form fieldset ul input {
+    width: 180px;
+	padding: 5px;
+	margin: 5px;
+	
+}
+li {
+	color: rgba(5,34,107,1);
+	font-size: 22px;
+	letter-spacing: normal;
+	
+	
+	
+}
+input[type="submit"] {
+	margin: 50px;
+	margin-top: 5px;
+	padding: 13px;
+	font-size: larger;
+	background:rgba(38,126,182,0.99);
+	width: 190px;
+	height: 40px;
+	text-align: center;
+	
+	
+}
+ul.errors {
+	text-fill-color:  #f50707;
+	padding: 10px;
+	font-style: italic;
+	font-weight: bold;
+	font-size: 20px;
+	border: x-large;
+	
+}
+	
+label {
+	color: rgba(255,255,255,1);
+	font-family: sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+    text-align: left	
+}	
+fieldset {
+	background-color:rgba(118,168,204,0.44);
+	border-color: #1505a0
+	}	
+	
+input[type="checkbox"] {
+	  background-color: #1b0a8b;
+	 
+	 
+}	
+input[type="text"] {
+	width: 190px;
+}
+	
+ul {
+	color: rgba(184,14,14,0);
+}	
+	
+	
