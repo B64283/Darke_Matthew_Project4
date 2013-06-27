@@ -36,7 +36,7 @@ legend {
     border: bold;
 }
 body {
-	background-color: #7b7e7e 
+	background-image: -webkit-linear-gradient(#898989 0%, #a6a6a6 100%)
 }
 h2,h3 {
 	font-family: sans-serif;
