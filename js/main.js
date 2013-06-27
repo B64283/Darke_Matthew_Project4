@@ -12,19 +12,19 @@ window.addEventListener("DOMContentLoaded", function() {
 	    return ele;
     }
     
-   function travel(){
+   function makeCats(){
 	   var formTag = document.getElementsByTagName("form"),
-	   	selectli = $("travelTyp"),
+	   	selectLi = $("select"),
 	   	makeSelect = document.createElement("select");
-	   	makeSelect.setAttribute("id", "travelTyp");
-	 for (var i=0,  j=travelTyp.length; i<j; i++){
+	   	makeSelect.setAttribute("id", "groups");
+	 for (var i=0,  j=travelGroups.length; i<j; i++){
 	 	var makeOption = document.createElement("option");
-	    optText = travelTyp[i]; 
+	    optText = travelGroups[i]; 
 	 	makeOption.setAttribute("value", optText);
 	 	makeOption.innerHTML = optText;
 	 	makeSelect.appendChild(makeOption);
 	 }
-	selectli.appendChild(makeSelect);   	
+	selectLi.appendChild(makeSelect);   	
 }
    //var climatesvalue = ["Hot", "Raining", "Cold"];
    //climate();
@@ -84,7 +84,7 @@ window.addEventListener("DOMContentLoaded", function() {
         getMedicationvalue();
         getToiletriesvalue()
 	    var item			  = {}; 
-	        item.travelTyp     =["Type of travel:", $("travelTyp").value];         
+	        item.group     =["group:", $("groups").value];         
 	        item.dest         =["Vacation Destination:", $( "vdest" ).value];
 	        item.days        =["length of vacation:", $("quantity").value];
 	        item.clothes       =["checkbox Clothes:", Clothesvalue];
@@ -120,12 +120,12 @@ window.addEventListener("DOMContentLoaded", function() {
 	    	var obj = JSON.parse(value);
 	    	var makeSubList = document.createElement("ul");
 	    	makeli.appendChild(makeSubList);
-	    	getImage(obj.travelTyp[0], makeSubList);
+	    	getImage(obj.group[1], makeSubList);
 	    	for (var n in obj){
-		    	var makeSubLi = document.createElement("li");
-		    	makeSubList.appendChild(makeSubLi);
+		    	var makeSubli = document.createElement("li");
+		    	makeSubList.appendChild(makeSubli);
 		    	var optSubText = obj[n][0]+" "+obj[n][1];
-		    	makeSubLi.innerHTML = optSubText; 
+		    	makeSubli.innerHTML = optSubText; 
 		    	makeSubList.appendChild(linksLi);
 		   } 
 		   makeItemLinks(localStorage.key(i), linksLi);     // create edit and delete buttons / link for each ltem in local storage
@@ -181,7 +181,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	    toggleControls("off");
 	    
 	    //populate the form fields with current local storage values
-	    $("travelTyp").value = item.travelTyp[1];	    
+	    $("groups").value = item.group[1];	    
 	    $("vdest").value = item.dest[1];
 	    $("quantity").value = item.days[1];	    
 	    if (item.clothes[1] == "Clothes"); {
@@ -210,7 +210,7 @@ window.addEventListener("DOMContentLoaded", function() {
     
     }
     function deleteItem(){
-	    var ask = confirm("Are you sure you want to delete Vacation?");
+	    var ask = confirm("Are you sure you want to delete the travel plan?");
 	    if (ask){
 	        localStorage.removeItem(this.key);
 	        alert("Vacation was deleted.");
@@ -231,13 +231,13 @@ window.addEventListener("DOMContentLoaded", function() {
  }
      function validate(e){
 	     //define elemints we want to check
-	     var gettravelTyp = $("travelTyp")
+	     var getGroup = $("groups")
 	     var getvdest = $("vdest");
 	     var getquantity = $("quantity")	;     
          
          //reset error messeages
          errMsg.innerHTML = " ";
-         gettravelTyp.border = "1px solid black";         
+         getGroup.border = "1px solid black";         
          getvdest.style.border = "1px solid black";
          getquantity.style.border = "1px solid black";        
          
@@ -245,7 +245,7 @@ window.addEventListener("DOMContentLoaded", function() {
          var messageAry = [];
          
           //name validation   
-         if (gettravelTyp.value === ""){
+         if (getGroup.value === "--Choose a Group--" ){
 	         var travelTypError = "Please enter type of travel."
 	         gettravelTyp.style.border = "2px solid red";
 	         messageAry.push(travelTypError);
@@ -276,8 +276,8 @@ window.addEventListener("DOMContentLoaded", function() {
 	        storeData(this.key);
         }
     }     
-    //var climates = ["Hot", "Raining", "Cold"];
-    //climate();    
+    var travelGroups = ["--Choose A Group--", "Vacation", "Busniess", "Commute"];
+    makeCats();    
     errMsg = $("errors");
     //sets links and submits
     var displayData = $("Display");

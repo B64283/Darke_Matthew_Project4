@@ -4,7 +4,7 @@
 
 var json = {
 	"vacation1": {
-		"travelTyp": ["Type of travel:", "Vacation"],		
+		"group": ["group:", "Vacation"],		
 		"dest": ["Vacation Destination:", "Rome"],
 		"days": ["lengthof Vacation:", "9"],
 		"clothes": ["checkbox Clothes:", "Clothes" ],
@@ -15,7 +15,7 @@ var json = {
 		"extraNotes": ["extra thoughts!:", "Rome, here I come!"]	
 		},
    "vacation2": {
-		"travelTyp": ["Type of travel:", "busniess"],		
+		"group": ["group:", "Busniess"],		
 		"dest": ["Vacation Destination:", "Israel"],
 		"days": ["lengthof Vacation:", "9"],
 		"clothes": ["checkbox Clothes:", "Clothes" ],
@@ -26,7 +26,7 @@ var json = {
 		"extraNotes": ["extra thoughts!:", "Israel, here I come!"]	
    },
     "vacation3": {
-		"travelTyp": ["Type of travel:", "Commute"],		
+		"group": ["group:", "Commute"],		
 		"dest": ["Vacation Destination:", "Israel"],
 		"days": ["lengthof Vacation:", "9"],
 		"clothes": ["checkbox Clothes:", "Clothes" ],
